@@ -13,30 +13,24 @@
         <span id="timer" class="float-right mr-2" style="color: rgb(255, 255, 255)">Time: 0</span>
     </header>
 
+    
     <div class="container" style="margin-top: 40px;">
-    <div class="row"></div>
-
-    <div class="row">
+    <div class="row start-page">
         <div class= "col text-center" style="font-weight:bold">
             <h1>Code Quiz</h1>
-        </div>
-    </div>
-        <div class="row">
-            <div class="col text-center" style="font-weight: bold;">
                 <p>WELCOME! Ready to take my quiz? </p>
                 <button id="startbtn" type="button" class="btn btn-outline-warning btn-lg"> Start </button>
             </div>
-            
-            <div class="questions">
-                <ul id="answerOptions" class="list-unstyled">
-                    <button id="A" onclick="forAnswer('A')">A</button>
-                    <button id="B" onclick="forAnswer('B')">B</button>
-                    <button id="C" onclick="forAnswer('C')">C</button>
-                    <button id="D" onclick="forAnswer('D')">D</button>
-                </ul>
-            </div>
         </div>
+    <div class="questions" style="display: none;">
+        <h2 id="question-text"> tester </h2>
+            <button id="A" onclick="forAnswer('A')">A</button>
+            <button id="B" onclick="forAnswer('B')">B</button>
+            <button id="C" onclick="forAnswer('C')">C</button>
+            <button id="D" onclick="forAnswer('D')">D</button>
     </div>
-   
+    </div>
+    <script src = "./script.js"></script>
 </body>
 </html>
+

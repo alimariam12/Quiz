@@ -1,38 +1,16 @@
-let questions = [
-    {
-        question: "Question 1: blah blah blah question question?",
-        options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-        answer: "blah 3",
-    },
-    {
-        question: "Question 1: blah blah blah question question?",
-        options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-        answer: "blah 3",
-    },
-    {
-        question: "Question 1: blah blah blah question question?",
-        options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-        answer: "blah 3",
-    },
-    {
-        question: "Question 1: blah blah blah question question?",
-        options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-        answer: "blah 3",
-    },
-    {
-        question: "Question 1: blah blah blah question question?",
-        options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-        answer: "blah 3",
-    },
-    {
-        question: "Question 1: blah blah blah question question?",
-        options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-        answer: "blah 3",
-    },
-];
+let start = document.querySelector("#startbtn")
+let questionEl = document.querySelector(".questions")
+let startPage = document.querySelector(".start-page")
 
-function beginQuiz() {
-    let startbtnEl = document.querySelector("#startbtn");
-    let startTimer = document.querySelector("#timer");
-    let highscorebtnEl = document.querySelector("#highscorebtn");
+
+start.addEventListener("click", Quiz)
+
+function Quiz() {
+    startPage.style.display = "none";
+    questionEl.style.display = "block";
 }
+function showResults(){
+
+}
+
+
