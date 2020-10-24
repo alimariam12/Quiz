@@ -1,36 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>Code Quiz</title>
 </head>
+
 <body>
-    <header class="p-3" style="background-color: #333">
-        <a href="script.js" id="highscorebtn">View High Scores</a>
-        <span id="timer" class="float-right mr-2" style="color: rgb(255, 255, 255)">Time: 0</span>
+    <header class="p-3">
+        <a href="script.js">View High Scores</a><button>Go Back</button></a>
+        <button id="clear">Clear Highscores</button>
+        <span id="timer" class="float-right mr-2">Time: 0</span>
     </header>
 
-    
-    <div class="container" style="margin-top: 40px;">
-    <div class="row start-page">
-        <div class= "col text-center" style="font-weight:bold">
-            <h1>Code Quiz</h1>
-                <p>WELCOME! Ready to take my quiz? </p>
-                <button id="startbtn" type="button" class="btn btn-outline-warning btn-lg"> Start </button>
-            </div>
-        </div>
-    <div class="questions" style="display: none;">
-        <h2 id="question-text"> tester </h2>
+    <div class="firstcontainer" id="start-page">
+        <h1><strong>Code Quiz</strong></h1>
+        <p>Welcome! Ready to take my quiz?</p>
+        <button id="starterbtn" type="button" class="btn btn-outline-warning btn-lg"> Start</button>
+    </div>
+
+    <div class="secondcontainer" id="quizstarts">
+        <h2 id="questions"> tester </h2>
+        <div id=question-text>
             <button id="A" onclick="forAnswer('A')">A</button>
             <button id="B" onclick="forAnswer('B')">B</button>
             <button id="C" onclick="forAnswer('C')">C</button>
             <button id="D" onclick="forAnswer('D')">D</button>
+            <p class="feedback"></p>
+        </div>
     </div>
-    </div>
-    <script src = "./script.js"></script>
-</body>
-</html>
 
+    <div class="lastcontainer" id="scorepage">
+        <p>
+            Enter initials: <input type="text" id="initials" max="3" />
+            <button id="submit">Submit</button>
+        </p>
+    </div>
+
+
+
+
+
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
