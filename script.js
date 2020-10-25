@@ -67,10 +67,6 @@ function startQuiz() {
 }
 let answer;
 function startQuestions() {
-   // questionNumber++;
-   // answer = 
-console.log("quiz")
-
     questionHead.textContent = allQuestions[questionNumber].question;
     answerChoices.innerHTML = "";
 
@@ -83,6 +79,10 @@ console.log("quiz")
         answerBtn = answerChoices.appendChild(nextChoice).setAttribute("class", "p-3 m-1 btn btn-light btn-block");
     }
     
+}
+function nextQuestion() {
+
+
 }
 // if user statement = rightAnswer
 
