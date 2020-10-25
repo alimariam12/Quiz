@@ -78,10 +78,21 @@ function startQuestions() {
         nextChoice.textContent = choices[i]
         answerBtn = answerChoices.appendChild(nextChoice).setAttribute("class", "p-3 m-1 btn btn-light btn-block");
     }
+    checkChoice(choices)();
     
 }
-// if user statement = rightAnswer
 
+function checkChoice(choices) {
+    // Get the current answer from allQuestions[questionNumber]
+
+    if (choices === answer) {
+        allQuestions[questionNumber].rightAnswer
+    } else {
+        // Our choice is incorrect...
+    }
+}
+// if user statement = rightAnswer
+nextChoice.onclick = function() { checkChoice(choices[i]) }
 
 buttonA.addEventListener("click", finalgrade)
 
