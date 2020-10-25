@@ -80,10 +80,6 @@ function startQuestions() {
     }
     
 }
-function nextQuestion() {
-
-
-}
 // if user statement = rightAnswer
 
 
