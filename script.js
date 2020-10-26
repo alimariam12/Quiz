@@ -81,10 +81,12 @@ function startQuestions() {
   
   function checkChoice(choices) {
     console.log("hi");
+    questionNumber++
     if (choices === answer) {
       allQuestions[questionNumber].rightAnswer;
     } else {
     }
+    startQuestions ();
   }
 function checkChoice(event) {
   console.log(event.target);
