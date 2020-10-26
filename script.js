@@ -16,6 +16,7 @@ let questionNumber = 0
 let answerChoices = document.querySelector("#question-text");
 let questionHead = document.getElementById("questions");
 let secondsLeft = (questions.length * 15 + 1);
+let highscoreEl = document.querySelector(".highscorescontainer");
 
 let allQuestions = [
     {
@@ -24,22 +25,22 @@ let allQuestions = [
       rightAnswer: "blah 3",
     },
     {
-      question: "Question 1: blah blah blah question question?",
+      question: "Question 2: blah blah blah question question?",
       options: ["blah 1", "blah 2", "blah 3", "blah 4"],
       rightAnswer: "blah 3",
     },
     {
-      question: "Question 1: blah blah blah question question?",
+      question: "Question 3: blah blah blah question question?",
       options: ["blah 1", "blah 2", "blah 3", "blah 4"],
       rightAnswer: "blah 3",
     },
     {
-      question: "Question 1: blah blah blah question question?",
+      question: "Question 4: blah blah blah question question?",
       options: ["blah 1", "blah 2", "blah 3", "blah 4"],
       rightAnswer: "blah 3",
     },
     {
-      question: "Question 1: blah blah blah question question?",
+      question: "Question 5: blah blah blah question question?",
       options: ["blah 1", "blah 2", "blah 3", "blah 4"],
       rightAnswer: "blah 3",
     },
@@ -63,6 +64,8 @@ function startQuiz() {
 }
 let answer;
 function startQuestions() {
+    console.log("got here")
+
     questionHead.textContent = allQuestions[questionNumber].question;
     answerChoices.innerHTML = "";
   
@@ -79,17 +82,14 @@ function startQuestions() {
     // checkChoice(choices)();
   }
   
-  function checkChoice(choices) {
-    console.log("hi");
-    questionNumber++
-    if (choices === answer) {
-      allQuestions[questionNumber].rightAnswer;
-    } else {
-    }
-    startQuestions ();
-  }
 function checkChoice(event) {
-  console.log(event.target);
+  console.log("hi");
+  //if (choice === answer) {
+  //  allQuestions[questionNumber].rightAnswer;
+  ///} else {
+  //}
+  questionNumber++
+  startQuestions();
 }
 
 

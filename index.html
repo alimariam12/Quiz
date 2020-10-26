@@ -12,8 +12,7 @@
 
 <body>
     <header class="p-3">
-        <a href="script.js">View High Scores</a><button>Go Back</button></a>
-        <button id="clear">Clear Highscores</button>
+        <a href="./Highscore.html">View High Scores</a>
         <span id="timer" class="float-right mr-2">Time: 0</span>
     </header>
 
@@ -24,7 +23,8 @@
     </div>
 
     <div class="secondcontainer" id="quizstarts">
-        <h2 id="questions"> tester </h2>
+        
+        <h2 id="questions"></h2>
         <div id="question-text">
             <button id="A" onclick="forAnswer('A')">A</button>
             <button id="B" onclick="forAnswer('B')">B</button>
@@ -36,16 +36,10 @@
 
     <div class="lastcontainer" id="scorepage">
         <p>
-            Enter initials: <input type="text" id="initials" max="3" />
-            <button id="submit">Submit</button>
+            Enter Name: <input type="text" id="initials"/>
+            <button type ="button" id="submit">Submit</button>
         </p>
     </div>
-
-
-
-
-
-
 
     <script src="./script.js"></script>
 </body>
