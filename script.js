@@ -4,8 +4,6 @@ let questionPage = document.querySelector(".secondcontainer")
 let finalPage = document.querySelector(".lastcontainer")
 let highscorebtnEl = document.querySelector("#highscorebtn")
 let quizTimer = document.querySelector("#timer")
-let beginQuestions = document.querySelector("#quizstarts")
-let finalScore = document.querySelector("#getscore")
 let submitbtnEl = document.querySelector("#submit")
 let answerBtn = document.querySelector("#A")
 let yourfinalScore = 0
@@ -20,29 +18,29 @@ let highscoreEl = document.querySelector(".highscorescontainer");
 
 let allQuestions = [
     {
-      question: "Question 1: blah blah blah question question?",
-      options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-      rightAnswer: "blah 3",
+      question: "Commonly used data types DO NOT include:",
+      options: ["strings", "booleans", "alerts", "numbers"],
+      rightAnswer: "alerts",
     },
     {
-      question: "Question 2: blah blah blah question question?",
-      options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-      rightAnswer: "blah 3",
+      question: "The condition in an if / else statement is enclosed within ____.",
+      options: ["quotes", "curly brackets", "parentheses", "square brackets"],
+      rightAnswer: "parentheses",
     },
     {
-      question: "Question 3: blah blah blah question question?",
-      options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-      rightAnswer: "blah 3",
+      question: "Arrays in JavaScript can be used to store ____.",
+      options: ["numbers and strings", "other arrays", "booleans","all of the above"],
+      rightAnswer: "all of the above",
     },
     {
-      question: "Question 4: blah blah blah question question?",
-      options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-      rightAnswer: "blah 3",
+      question: "String values must be enclosed within ____ when being assigned to variables.",
+      options: ["commas", "curly brackets", "quotes", "parentheses"],
+      rightAnswer: "quotes",
     },
     {
-      question: "Question 5: blah blah blah question question?",
-      options: ["blah 1", "blah 2", "blah 3", "blah 4"],
-      rightAnswer: "blah 3",
+      question: "A very useful tool used during development and debugging for printing content to the debugger is:",
+      options: ["JavaScript", "terminal / bash", "for loops", "console.log"],
+      rightAnswer: "console.log",
     },
 ]
 
@@ -64,30 +62,23 @@ function startQuiz() {
 }
 let answer;
 function startQuestions() {
-    console.log("got here")
-
-    questionHead.textContent = allQuestions[questionNumber].question;
-    answerChoices.innerHTML = "";
+  questionHead.textContent = allQuestions[questionNumber].question;
+  answerChoices.innerHTML = "";
   
-    let choices = allQuestions[questionNumber].options;
+  let choices = allQuestions[questionNumber].options;
   
-    for (let i = 0; i < choices.length; i++) {
-      let nextChoice = document.createElement("button");
+  for (let i = 0; i < choices.length; i++) {
+  let nextChoice = document.createElement("button");
   
-      nextChoice.textContent = choices[i];
-      nextChoice.setAttribute("class", "p-3 m-1 btn btn-light btn-block answer");
-      nextChoice.addEventListener("click", checkChoice);
-      answerChoices.appendChild(nextChoice);
-    }
-    // checkChoice(choices)();
+  nextChoice.textContent = choices[i];
+  nextChoice.setAttribute("class", "p-3 m-1 btn btn-light btn-block answer");
+  nextChoice.addEventListener("click", checkChoice);
+  answerChoices.appendChild(nextChoice);
+  }
+    
   }
   
 function checkChoice(event) {
-  console.log("hi");
-  //if (choice === answer) {
-  //  allQuestions[questionNumber].rightAnswer;
-  ///} else {
-  //}
   questionNumber++
   startQuestions();
 }

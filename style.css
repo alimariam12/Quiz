@@ -12,6 +12,8 @@
 }
 .secondcontainer {
     display: none;
+    margin-top: 40px;
+    text-align: center;
 }
 .lastcontainer {
     display: none;
