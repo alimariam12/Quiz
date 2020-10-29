@@ -15,6 +15,7 @@ let answerChoices = document.querySelector("#question-text");
 let questionHead = document.getElementById("questions");
 let secondsLeft = (questions.length * 15 + 1);
 let highscoreEl = document.querySelector(".highscorescontainer");
+let feedbackEl = document.querySelector(".feedback")
 
 let allQuestions = [
     {
@@ -60,7 +61,7 @@ function startQuiz() {
     
     startQuestions();
 }
-let answer;
+
 function startQuestions() {
   questionHead.textContent = allQuestions[questionNumber].question;
   answerChoices.innerHTML = "";
@@ -75,13 +76,28 @@ function startQuestions() {
   nextChoice.addEventListener("click", checkChoice);
   answerChoices.appendChild(nextChoice);
   }
-    
+
   }
   
-function checkChoice(event) {
-  questionNumber++
-  startQuestions();
+function checkChoice(choices) {
+    // Get the current answer from allQuestions[questionNumber]
+    console.log("hi");
+    if (this.value !== allQuestions[questionNumber].rightAnswer) {
+      timer -= 15;
+      if (time < 0) {
+        time = 0;
+      }
+      feedbackEl.textContent = "Wrong!"
+    } else {
+      feedbackEl.textContent = "Correct!"
+    }
+  }
+
+  function checkChoice(event) {
+    questionNumber++
+    startQuestions();
+  }
+
+function endQuiz(){
+  
 }
-
-
-
